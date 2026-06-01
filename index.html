@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptop Inventory</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>HP Laptop Inventory</h1>
+
+    <section class="card form-card">
+      <h2>Add New Laptop</h2>
+      <form id="laptopForm">
+        <label>
+          Laptop Brand
+          <input type="text" name="laptop_brand" id="laptop_brand" placeholder=" " required />
+        </label>
+
+        <label>
+          Series
+          <input type="text" name="series" id="series" placeholder="  " required />
+        </label>
+
+        <label>
+          Price
+          <input type="number" name="price" id="price" placeholder="    " required min="0" />
+        </label>
+
+        <button type="submit">add</button>
+      </form>
+      <div id="statusMessage" class="status-message"></div>
+    </section>
+
+    <section class="card table-card">
+      <h2>Inventory</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Series</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryBody"></tbody>
+        </table>
+      </div>
+      <button id="clearButton" class="secondary">Clear All</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
